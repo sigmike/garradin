@@ -15,7 +15,8 @@
         <caption><h4>{$souscode|escape} — {$souscode|get_nom_compte|escape}</h4></caption>
         <colgroup>
             <col width="15%" />
-            <col width="65%" />
+            <col width="55%" />
+            <col width="10%" />
             <col width="10%" />
             <col width="10%" />
         </colgroup>
@@ -25,6 +26,7 @@
                 <th>Intitulé</th>
                 <td>Débit</td>
                 <td>Crédit</td>
+                <td>Solde</td>
             </tr>
         </thead>
         <tbody>
@@ -34,6 +36,7 @@
                 <th>{$ligne.libelle|escape}</th>
                 <td>{if $ligne.compte_debit == $souscode}{$ligne.montant|html_money}{/if}</td>
                 <td>{if $ligne.compte_credit == $souscode}{$ligne.montant|html_money}{/if}</td>
+                <td>{$ligne.solde|html_money}</td>
             </tr>
         {/foreach}
         </tbody>
@@ -43,6 +46,7 @@
                 <th>Solde final</th>
                 <td>{if $souscompte.debit > 0}{$souscompte.debit|html_money}{/if}</td>
                 <td>{if $souscompte.credit > 0}{$souscompte.credit|html_money}{/if}</td>
+                <td>{$souscompte.solde|html_money}</td>
             </tr>
         </tfoot>
     </table>
