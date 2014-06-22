@@ -479,13 +479,13 @@ Classe 7 — Comptes de produits
 
 Classe 8 ­— Contributions bénévoles en nature
 
-86 RÉPARTITION PAR NATURE DE CHARGES
+86 EMPLOIS DES CONTRIBUTIONS VOLONTAIRES EN NATURE
 
     861 Mise à dispositions gratuites de biens
     862 Prestations
     864 Personnel bénévole
 
-87 RÉPARTITION PAR NATURE DE RESSOURCES
+87 CONTRIBUTIONS VOLONTAIRES EN NATURE
 
     870 Bénévolat
     871 Prestations en nature
