@@ -388,7 +388,7 @@ class Compta_Exercices
                 UNION
                 SELECT compte_credit AS compte, 0 AS debit, SUM(montant) AS credit
                     FROM compta_journal WHERE id_exercice = '.(int)$exercice.' GROUP BY compte_credit)
-            WHERE compte LIKE \'6%\' OR compte LIKE \'7%\'
+            WHERE compte LIKE \'6%\' OR compte LIKE \'7%\' OR compte LIKE \'8%\'
             GROUP BY compte
             ORDER BY base64(compte) COLLATE BINARY ASC;'
             )->execute();
@@ -397,9 +397,13 @@ class Compta_Exercices
         {
             list($compte, $debit, $credit) = $row;
             $classe = substr($compte, 0, 1);
+            if ($classe == 8)
+            {
+                $classe = substr($compte, 0, 2);
+            }
             $parent = substr($compte, 0, 2);
 
-            if ($classe == 6)
+            if ($classe == 6 || $classe == 86)
             {
                 if (!isset($charges['comptes'][$parent]))
                 {
@@ -415,7 +419,7 @@ class Compta_Exercices
                 $charges['total'] += $solde;
                 $charges['comptes'][$parent]['solde'] += $solde;
             }
-            elseif ($classe == 7)
+            elseif ($classe == 7 || $classe == 87)
             {
                 if (!isset($produits['comptes'][$parent]))
                 {
