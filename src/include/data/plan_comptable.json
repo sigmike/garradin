@@ -1663,7 +1663,7 @@
     },
     "86": {
         "code": 86,
-        "nom": "R\u00c9PARTITION PAR NATURE DE CHARGES",
+        "nom": "EMPLOIS DES CONTRIBUTIONS VOLONTAIRES EN NATURE",
         "parent": 8,
         "position": 8
     },
@@ -1687,7 +1687,7 @@
     },
     "87": {
         "code": 87,
-        "nom": "R\u00c9PARTITION PAR NATURE DE RESSOURCES",
+        "nom": "CONTRIBUTIONS VOLONTAIRES EN NATURE",
         "parent": 8,
         "position": 4
     },
