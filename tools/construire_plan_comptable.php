@@ -443,7 +443,7 @@ Classe 7 — Comptes de produits
 
 75 AUTRES PRODUITS DE GESTION COURANTE
 
-    754 Collectes
+    754 Collectes et dons manuels
     756 Cotisations
     758 Produits divers de gestion courante
 
