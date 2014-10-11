@@ -1,4 +1,4 @@
 /src/include/libs/
 /src/cache/
-*.sqlite
+*.sqlite*
 *.log
