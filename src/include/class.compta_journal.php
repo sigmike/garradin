@@ -237,12 +237,18 @@ class Compta_Journal
             }
         }
 
+        if ($data['compte_debit'] == "")
+            $data['compte_debit'] = NULL;
+
         if (!array_key_exists('compte_debit', $data) || 
             (!is_null($data['compte_debit']) && 
                 !$db->simpleQuerySingle('SELECT 1 FROM compta_comptes WHERE id = ?;', false, $data['compte_debit'])))
         {
             throw new UserException('Compte débité inconnu.');
         }
+
+        if ($data['compte_credit'] == "")
+            $data['compte_credit'] = NULL;
 
         if (!array_key_exists('compte_credit', $data) || 
             (!is_null($data['compte_credit']) && 

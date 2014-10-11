@@ -339,6 +339,13 @@ function tpl_select_compte($params)
 
     $out = '<select name="'.$name.'" id="f_'.$name.'" class="large">';
 
+    $out .= '<option value=""';
+    if ($selected == "")
+    {
+        $out .= ' selected="selected"';
+    }
+    $out .= '></option>';
+
     foreach ($comptes as $compte)
     {
         // Ne pas montrer les comptes désactivés
